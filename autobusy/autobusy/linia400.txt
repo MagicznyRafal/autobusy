@@ -1,0 +1,25 @@
+LINIA 400
+
+02:19 Rynek
+
+03:53 Szkutnika
+
+04:23 Reymonta
+
+05:12 Dworzec
+
+05:21 Rynek
+
+09:43 Szkutnika
+
+08:34 Reymonta
+
+10:32 Dworzec
+
+16:46 Rynek
+
+10:22 Szkutnika
+
+13:55 Reymonta
+
+14:45 Dworzec

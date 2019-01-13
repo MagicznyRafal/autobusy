@@ -1,0 +1,27 @@
+LINIA 13
+
+03:02 Dworzec
+
+05:28 Reymonta
+
+06:53 Szkutnika
+	
+04:32 Rynek
+
+07:52 Truskawkowa
+
+08:14 Bananowa
+
+09:17 Truskawkowa
+
+11:02 Bananowa
+
+11:54 Truskawkowa
+
+15:16 Bananowa
+
+18:39 Truskawkowa
+
+21:37 Bananowa
+
+23:45 Truskawkowa
