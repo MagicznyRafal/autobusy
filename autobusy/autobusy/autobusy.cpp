@@ -14,17 +14,18 @@ int main(int argc, char** argv)
 	{
 		if (strcmp(argv[1], "-g") == 0)
 		{
-			cout << "Generating" << endl;
+			cout << "Provided parameter is wrong! Possible parameter is -i" << endl;
 		}
 		else if (strcmp(argv[1], "-i") == 0)
 		{
-			cout << "Generating stations" << endl;
+			cout << "Generating stations..." << endl;
 			Station *stationHead = nullptr;
 			for (int i = 2; i < argc; i++)
 			{
 				string fileName = argv[i];
 				generateStations(stationHead, fileName);
 			}
+			deleteStationList(stationHead);
 		}
 		else
 		{

@@ -136,7 +136,7 @@ void generateFiles(Station * & head, Line * & lineHead)
 			file << stationTemp->name << endl << "==== \n \n \n";
 			do
 			{
-				file << "linia " << lineTemp->number << endl << endl;
+				file << "linia " << lineTemp->number << "\n \n";
 				while (hourTemp != nullptr)
 				{
 					if (hourTemp->next != nullptr)
@@ -168,31 +168,40 @@ void generateFiles(Station * & head, Line * & lineHead)
 	} while (stationTemp != nullptr);
 }
 
-void deleteLists(Station * & stationHead)
+void deleteHourList(Hour *&  hourHead)
 {
-	Line * lineHead = stationHead->linesHead;
-	Hour * hourHead = lineHead->hoursHead;
-	while (hourHead != nullptr)
+	while (hourHead)
 	{
 		Hour * hourTemp = hourHead->next;
 		delete hourHead;
 		hourHead = hourTemp;
 	}
+	
+	
+}
 
-	while (lineHead != nullptr)
+void deleteLineList(Line * & lineHead)
+{
+	while (lineHead)
 	{
 		Line * lineTemp = lineHead->next;
+		deleteHourList(lineHead->hoursHead);
 		delete lineHead;
 		lineHead = lineTemp;
 	}
+}
 
-	while (stationHead != nullptr)
+void deleteStationList(Station *&stationHead)
+{
+	while (stationHead)
 	{
 		Station * stationTemp = stationHead->next;
+		deleteLineList(stationHead->linesHead);
 		delete stationHead;
 		stationHead = stationTemp;
 	}
 }
+
 
 void generateStations(Station * & stationHead, string & fileName)
 {
@@ -218,6 +227,4 @@ void generateStations(Station * & stationHead, string & fileName)
 		}
 	}
 	generateFiles(stationHead, stationHead->linesHead);
-	//deleteLists(stationHead);
-	cout << "hur durr";
 }
